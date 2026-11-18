@@ -1,0 +1,18 @@
+{
+  "name": "نظام إدارة الحلال",
+  "short_name": "حلال المزرعة",
+  "description": "متابعة الإبل والغنم والمواليد والأعلاف",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#6E431C",
+  "theme_color": "#6E431C",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حلال المزرعة</title>
+<meta name="theme-color" content="#6E431C">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="حلال المزرعة">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  html,body{margin:0;height:100%;background:#F7EFE3;overflow:hidden}
+  iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#F7EFE3}
+  #splash{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+    background:linear-gradient(160deg,#B07A3E,#6E431C);color:#FFF6E4;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;transition:opacity .4s}
+  #splash img{width:120px;height:120px;border-radius:28px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  #splash b{font-size:20px}#splash small{opacity:.8}
+  #splash.hide{opacity:0;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="splash"><img src="icon-192.png" alt=""><b>نظام إدارة الحلال</b><small>جاري التحميل...</small></div>
+<iframe id="app" title="نظام إدارة الحلال" allow="camera; clipboard-write; fullscreen"
+  src="https://script.google.com/macros/s/AKfycbxHPKQXE7V7yc8IN422cO_Mxhgsmq1BzewBQBVZuPvO53CvosjAT19KavtoNNUpvoOE-w/exec"></iframe>
+<script>
+  document.getElementById('app').addEventListener('load', function () { setTimeout(function () { document.getElementById('splash').classList.add('hide'); }, 300); });
+  setTimeout(function () { document.getElementById('splash').classList.add('hide'); }, 12000);
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function () {});
+</script>
+</body>
+</html>
